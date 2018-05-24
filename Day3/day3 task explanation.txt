@@ -1,0 +1,4 @@
+For today I plan on taking yesterdays project and upping the antii... by making it an automatic report generator
+incase I ever  work any where that I have a predone report generatored where ever I work and that it is neatly produced.
+
+In this method I'll be sing some base report template and will look int that... 
