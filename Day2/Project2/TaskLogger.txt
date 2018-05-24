@@ -1,0 +1,10 @@
+Goal: create a gui base python project that sits somewhere on your screen and overlays over whatever your working on...
+Features: 
+write something down
+click a button -> submits time-> total time spent versus last submit task -> to text file/google sheets for logging.
+
+Reason-> keep track of contracting work and time clutter when playing video games and what not. 
+
+Pre based research-? looks up important python based gui applications... 
+
+future notes ( perhaps making a generator for these project write ups ... maybe tomorrow. 
