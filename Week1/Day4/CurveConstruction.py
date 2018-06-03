@@ -42,30 +42,18 @@ def up():
 def down():
     turtle.pendown()
 
-def randomBout():
-    a = random.random()
-    b = random.random()
-    c = 100
-    d = b * c
-    turtle.forward(d)
+def direc(x):
+    if x > 180:
+        y = 360 - x
+        right(y)
+        
+    if x < 180:
+        left(x)
+        
+    if x == 180:
+        left(x)
+        
 
-def irisCenter():
-    for i in range(360):
-        forward(100)
-        circle(5)
-        up()
-        forward(50)
-        down()
-        forward(50)
-        circle(10)
-        up()
-        backward(200)
-        down()
-        left(1)
-
-" THE GENERATION OF THE IRIS "
-
-#for i in range(360):
 speed(0)
 
 def shape():
@@ -129,5 +117,66 @@ def iris():
     shape()
     circleGap()
     irisCenter()
+    
+def shome(slong = 300, slat = 300):
+    home()
+    left(180)
+    up()
+    forward(slong)
+    left(90)
+    forward(slat)
+    left(90)
+    down()
+    
+#so I want to make a curve constructor here... meaning that we generate some form of
+    # counter for first second ie extra order curves.
+def setGraph(x):
+    forward(x)
+    shome()
+    left(90)
+    forward(x)
+    shome()
 
-iris()
+#x the length
+#y the concave
+
+def curve(x,y):
+    tl = int( (x * (2 ** .5) ) /y)
+    print(tl)
+    for i in range(tl):
+        forward(y)
+        direc(.5)
+    up()
+    shome()
+    down()
+    
+x = 100
+#setGraph(x)
+#curve(x,4)
+
+#shome()
+#for i in range(2,20):
+#    curve(x,i)
+
+def Pendulum(i):
+    up()
+    home()
+    right(90)
+    forward(i)
+    down()
+    left(90)
+    for i in range(40):
+        forward(5)
+        left(1)
+    for i in range(80):
+        forward(-5)
+        right(1)
+    up()
+    for i in range(40):
+        forward(5)
+        left(1)
+    down()
+    
+
+for i in range(100):
+    Pendulum(i*5)
